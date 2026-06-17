@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HueMind Studios | Services & Solutions</title>
+    
+    <!-- Global Brand Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="overflow-x-hidden bg-white selection:bg-amber-500/10">
+
+    <!-- Header Injection Target -->
+    <div id="global-header"></div>
+
+    <!-- MAIN HERO HEADER -->
+    <header class="max-w-4xl mx-auto px-6 pt-20 pb-12 relative z-10">
+        <span class="text-xs font-bold uppercase tracking-widest text-amber-600 bg-amber-50 px-3 py-1.5 rounded-full border border-amber-200/40">Services & Capabilities</span>
+        <h1 class="text-4xl md:text-6xl font-extrabold text-gray-950 tracking-tighter mt-4 leading-tight">
+            Practical Software. <span class="text-amber-500">Structured Text.</span>
+        </h1>
+        <p class="mt-4 text-lg text-gray-600 max-w-2xl font-light">
+            Developing clean web interfaces, writing automated backend scripts, and organizing complex information into polished academic and document layouts.
+        </p>
+    </header>
+
+    <!-- FILTER TABS CONTROLLER -->
+    <div class="max-w-6xl mx-auto px-6 mb-12 relative z-10">
+        <div class="flex border-b border-gray-100 gap-6 text-sm font-medium">
+            <button onclick="switchTab('all')" id="tab-all" class="py-3 border-b-2 border-amber-500 text-black transition focus:outline-none">
+                All Services
+            </button>
+            <button onclick="switchTab('systems')" id="tab-systems" class="py-3 border-b-2 border-transparent text-gray-500 hover:text-black transition focus:outline-none">
+                Web Systems & Automation
+            </button>
+            <button onclick="switchTab('creative')" id="tab-creative" class="py-3 border-b-2 border-transparent text-gray-500 hover:text-black transition focus:outline-none">
+                Academic & Document Layouts
+            </button>
+        </div>
+    </div>
+
+    <!-- SERVICES CATALOGUE GRID -->
+    <main class="max-w-6xl mx-auto px-6 w-full mb-32 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="services-grid">
+            
+            <!-- CATEGORY: SYSTEMS -->
+            <!-- SERVICE 1: DASHBOARD SYSTEMS -->
+            <div class="interactive-card bg-white border border-gray-100 rounded-3xl p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition duration-300" data-category="systems">
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-amber-50 flex items-center justify-center text-amber-600 mb-6">
+                        <i data-lucide="layout-dashboard" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-950 tracking-tight mb-3">Dashboard & Internal Systems</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed font-light">
+                        Custom administration panels, tracking systems, and local management tools built to organize operational data, handle calculations, and keep workflows structured.
+                    </p>
+                </div>
+                <div class="mt-8 pt-4 border-t border-gray-50 flex items-center justify-between text-xs text-gray-400 font-mono">
+                    <span>ASP.NET / NEXT.JS</span>
+                    <span class="text-amber-600 font-sans font-semibold">Web System</span>
+                </div>
+            </div>
+
+            <!-- SERVICE 2: STUDENT & LEARNING WEBSITES -->
+            <div class="interactive-card bg-white border border-gray-100 rounded-3xl p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition duration-300" data-category="systems">
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-amber-50 flex items-center justify-center text-amber-600 mb-6">
+                        <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-950 tracking-tight mb-3">Student Portals & Project Sites</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed font-light">
+                        Lightweight academic portals, learning reference hubs, and documentation spaces built for straightforward navigation and fast load times.
+                    </p>
+                </div>
+                <div class="mt-8 pt-4 border-t border-gray-50 flex items-center justify-between text-xs text-gray-400 font-mono">
+                    <span>VANILLA JS / TAILWIND</span>
+                    <span class="text-amber-600 font-sans font-semibold">Education</span>
+                </div>
+            </div>
+
+            <!-- SERVICE 3: PYTHON DATA AUTOMATION -->
+            <div class="interactive-card bg-white border border-gray-100 rounded-3xl p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition duration-300" data-category="systems">
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-amber-50 flex items-center justify-center text-amber-600 mb-6">
+                        <i data-lucide="terminal" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-950 tracking-tight mb-3">Scripting & Data Automation</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed font-light">
+                        Writing clean backend scripts to parse messy text documents, sort complex datasets, handle file conversions, and eliminate repetitive data-entry routines.
+                    </p>
+                </div>
+                <div class="mt-8 pt-4 border-t border-gray-50 flex items-center justify-between text-xs text-gray-400 font-mono">
+                    <span>PYTHON / SCRIPTING</span>
+                    <span class="text-amber-600 font-sans font-semibold">Automation</span>
+                </div>
+            </div>
+
+            <!-- CATEGORY: ACADEMIC / CREATIVE -->
+            <!-- SERVICE 4: DOCUMENT & BOOK LAYOUTS -->
+            <div class="interactive-card bg-white border border-gray-100 rounded-3xl p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition duration-300" data-category="creative">
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-purple-50 flex items-center justify-center text-purple-600 mb-6">
+                        <i data-lucide="book-open" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-950 tracking-tight mb-3">Document & eBook Formatting</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed font-light">
+                        Structuring text files, creative drafts, histories, or manuals into highly polished Word documents, PDFs, or clean digital book layouts.
+                    </p>
+                </div>
+                <div class="mt-8 pt-4 border-t border-gray-50 flex items-center justify-between text-xs text-gray-400 font-mono">
+                    <span>DOCX / PDF / MARKDOWN</span>
+                    <span class="text-purple-600 font-sans font-semibold">Layout</span>
+                </div>
+            </div>
+
+            <!-- SERVICE 5: ACADEMIC COMMISSIONS & NOTES -->
+            <div class="interactive-card bg-white border border-gray-100 rounded-3xl p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition duration-300" data-category="creative">
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-purple-50 flex items-center justify-center text-purple-600 mb-6">
+                        <i data-lucide="file-text" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-950 tracking-tight mb-3">Study Guides & Text Layouts</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed font-light">
+                        Compiling raw lecture materials, course frameworks, and textbook notes into highly organized, scannable, and clean visual study materials.
+                    </p>
+                </div>
+                <div class="mt-8 pt-4 border-t border-gray-50 flex items-center justify-between text-xs text-gray-400 font-mono">
+                    <span>INFORMATION DESIGN</span>
+                    <span class="text-purple-600 font-sans font-semibold">Academic</span>
+                </div>
+            </div>
+
+            <!-- SERVICE 6: PRESENTATION GRAPHICS -->
+            <div class="interactive-card bg-white border border-gray-100 rounded-3xl p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition duration-300" data-category="creative">
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-purple-50 flex items-center justify-center text-purple-600 mb-6">
+                        <i data-lucide="presentation" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-950 tracking-tight mb-3">Custom Presentation Decks</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed font-light">
+                        Redesigning standard slide presentations and pitches to focus on deliberate visual spacing, clean typography hierarchies, and cohesive content styling.
+                    </p>
+                </div>
+                <div class="mt-8 pt-4 border-t border-gray-50 flex items-center justify-between text-xs text-gray-400 font-mono">
+                    <span>POWERPOINT / SLIDES</span>
+                    <span class="text-purple-600 font-sans font-semibold">Graphics</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER INJECTION TARGET -->
+    <div id="global-footer"></div>
+
+    <!-- System UI Engine Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        function switchTab(category) {
+            const cards = document.querySelectorAll('#services-grid [data-category]');
+            const tabs = ['all', 'systems', 'creative'];
+            
+            tabs.forEach(t => {
+                const tabEl = document.getElementById(`tab-${t}`);
+                if (tabEl) {
+                    tabEl.className = "py-3 border-b-2 border-transparent text-gray-500 hover:text-black transition focus:outline-none";
+                }
+            });
+            
+            const activeTab = document.getElementById(`tab-${category}`);
+            if (activeTab) {
+                activeTab.className = "py-3 border-b-2 border-amber-500 text-black font-semibold transition focus:outline-none";
+            }
+            
+            cards.forEach(card => {
+                const cardCat = card.getAttribute('data-category');
+                if (category === 'all' || cardCat === category) {
+                    card.style.display = "flex";
+                    setTimeout(() => { card.style.opacity = "1"; card.style.transform = "translateY(0)"; }, 10);
+                } else {
+                    card.style.opacity = "0";
+                    card.style.transform = "translateY(10px)";
+                    setTimeout(() => { card.style.display = "none"; }, 200);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

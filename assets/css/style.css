@@ -1,0 +1,86 @@
+
+
+:root {
+    /* Exact color profile extracted from "HueMind Studio.png" */
+    --huemind-blue: #0077F0;       /* Left book cover gradient base */
+    --huemind-purple: #9244FF;     /* Right bottom spine gradient */
+    --huemind-cyan: #00E5FF;       /* Mid-top internal pages accent */
+    --huemind-teal: #00C896;       /* Mid-right internal page gradient */
+    --huemind-gold: #D4AF37;       /* The signature top-right '+' accent */
+    
+    /* Formal Text & Base Palette */
+    --text-primary: #111827;       /* Slate 900 for high readability */
+    --text-secondary: #4B5563;     /* Slate 600 for supporting descriptions */
+    --bg-formal: #FFFFFF;          /* Strict stark white presentation layer */
+}
+
+/* Base Configuration overrides */
+html {
+    scroll-behavior: smooth;
+    color: var(--text-primary);
+    background-color: var(--bg-formal);
+}
+
+/* Custom Interactive Focus Gradients */
+.gradient-text {
+    background: linear-gradient(135deg, var(--huemind-blue) 0%, var(--huemind-purple) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient-bg {
+    background: linear-gradient(135deg, var(--huemind-blue) 0%, var(--huemind-purple) 100%);
+}
+
+.logo-gradient-box {
+    background: linear-gradient(135deg, var(--huemind-blue) 0%, var(--huemind-purple) 50%, var(--huemind-teal) 100%);
+}
+
+/* ==========================================================================
+   ANIMATIONS & MICRO-INTERACTIONS
+   ========================================================================== */
+
+/* Fade In Upwards for entry items */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reveal-on-load {
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Card Hover Elevation Effect */
+.interactive-card {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                border-color 0.3s ease, 
+                box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.interactive-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -15px rgba(0, 119, 240, 0.08);
+}
+
+/* Custom Scrollbar Architecture */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #F9FAFB;
+}
+::-webkit-scrollbar-thumb {
+    background: #E5E7EB;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--huemind-blue);
+}

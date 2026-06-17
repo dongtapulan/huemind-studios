@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HueMind Labs | Interactive Exploration Tools</title>
+    
+    <!-- Global Brand Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Interactivity: Particle Background Canvas -->
+    <div id="particles-js"></div>
+
+    <!-- NAVIGATION (Transparent, Formal, Fixed) -->
+    <nav class="sticky top-0 z-50 bg-white border-b border-gray-100 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between py-2">
+            
+            <!-- Brand Logo Link -->
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="assets/images/HueMInd Studio.png" alt="HueMind Studios Logo" class="w-10 h-10 object-contain group-hover:scale-105 transition-transform duration-300">
+                <span class="font-bold text-xl tracking-tight text-gray-950">HueMind <span class="font-normal text-gray-500">Studios</span></span>
+            </a>
+
+            <!-- Navigation Links -->
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-700">
+                <a href="index.html" class="relative py-2 hover:text-black transition">Home</a>
+                <a href="labs.html" class="relative group py-2 text-black transition border-b-2 border-blue-600 pb-1">🌌 Labs</a>
+                <a href="publications.html" class="relative group py-2 hover:text-black transition">📚 Publications</a>
+                <a href="services.html" class="relative group py-2 hover:text-black transition">💼 Services</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-gray-600 focus:outline-none" id="menu-btn" onclick="toggleMobileMenu()">
+                <i data-lucide="menu" id="menu-icon"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Dropdown Menu -->
+        <div class="hidden md:hidden bg-white border-t border-gray-100" id="mobile-menu">
+            <div class="px-6 py-4 space-y-3 font-medium text-sm text-gray-700">
+                <a href="index.html" class="block hover:text-black">Home</a>
+                <a href="labs.html" class="block text-blue-600 font-semibold">🌌 Labs</a>
+                <a href="publications.html" class="block hover:text-black">📚 Publications</a>
+                <a href="services.html" class="block hover:text-black">💼 Services</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER / INTRODUCTION -->
+    <header class="max-w-4xl mx-auto px-6 pt-20 pb-16 text-center relative z-10">
+        <span class="text-xs font-bold uppercase tracking-widest text-blue-600 bg-blue-50 px-3 py-1.5 rounded-full border border-blue-200/40">HueMind Software Ecosystem</span>
+        <h1 class="text-4xl md:text-6xl font-extrabold text-gray-950 tracking-tighter mt-4 leading-tight">
+            Interactive Classroom <span class="gradient-text">Innovations</span>.
+        </h1>
+        <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto font-light">
+            Lightweight, open-access engines designed to eliminate friction in local education spaces. No complex APIs, zero unnecessary data dependencies.
+        </p>
+    </header>
+
+    <!-- LABS TOOLS CATALOGUE GRID -->
+    <main class="max-w-6xl mx-auto px-6 w-full mb-32 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            
+            <!-- LAB CARD 1: GEOATLAS -->
+            <div class="interactive-card bg-white border border-gray-100 rounded-3xl flex flex-col overflow-hidden shadow-sm hover:shadow-md transition duration-300">
+                <!-- Visual App Screenshot -->
+                <a href="https://exploregeoatlas.netlify.app/" target="_blank" class="w-full aspect-[16/10] overflow-hidden bg-gray-950 relative group block border-b border-gray-100">
+                    <img src="assets/images/geoatlas.jpg" alt="GeoAtlas Interface Preview" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors"></div>
+                </a>
+                <!-- Card Details -->
+                <div class="p-6 flex flex-col flex-grow justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-950 tracking-tight">GeoAtlas</h3>
+                            <span class="text-[9px] tracking-wider font-bold px-2 py-0.5 bg-blue-500/10 text-blue-600 rounded-full uppercase border border-blue-500/20">3D Engine</span>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            An interactive 3D exploration engine designed to visualize the complex interplay between geopolitics and the biosphere. Built as an open-source tool, GeoAtlas aggregates global data into a singular, accessible experience for students, educators, and curious minds alike.
+                        </p>
+                    </div>
+                    
+                    <!-- Action Bar -->
+                    <div class="flex items-center justify-between gap-4 pt-4 border-t border-gray-50 mt-auto">
+                        <a href="https://exploregeoatlas.netlify.app/" target="_blank" class="text-sm font-semibold text-blue-600 flex items-center gap-1 hover:text-blue-700 transition">
+                            Launch App <i data-lucide="external-link" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LAB CARD 2: SPACE.ENV -->
+            <div class="interactive-card bg-white border border-gray-100 rounded-3xl flex flex-col overflow-hidden shadow-sm hover:shadow-md transition duration-300">
+                <!-- Visual App Screenshot -->
+                <a href="https://spaceenv.netlify.app/" target="_blank" class="w-full aspect-[16/10] overflow-hidden bg-gray-950 relative group block border-b border-gray-100">
+                    <img src="assets/images/space-env.jpg" alt="Space.env Planetary Model Preview" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors"></div>
+                </a>
+                <!-- Card Details -->
+                <div class="p-6 flex flex-col flex-grow justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-950 tracking-tight">Space.env</h3>
+                            <span class="text-[9px] tracking-wider font-bold px-2 py-0.5 bg-purple-500/10 text-purple-600 rounded-full uppercase border border-purple-500/20">Offline Ready</span>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            Space.env was built to have a "Celestia-lite" experience that actually works in our local classrooms. No loading lag, no NASA API dependencies, and 100% offline capability. Great for isolated installations.
+                        </p>
+                    </div>
+                    
+                    <!-- Action Bar with Download Offline Folder Link -->
+                    <div class="flex items-center justify-between gap-2 pt-4 border-t border-gray-50 mt-auto">
+                        <a href="https://spaceenv.netlify.app/" target="_blank" class="text-sm font-semibold text-purple-600 flex items-center gap-1 hover:text-purple-700 transition">
+                            Launch Live <i data-lucide="external-link" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://drive.google.com/drive/folders/1VCJEQsHJ9HfjLc4qwrgMUHBweQHgJFro?usp=sharing" target="_blank" class="inline-flex items-center gap-1 text-[11px] font-medium bg-gray-100 hover:bg-purple-600 hover:text-white text-gray-700 px-3 py-1.5 rounded-full transition duration-300">
+                            <i data-lucide="download" class="w-3.5 h-3.5"></i> Offline Pack
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LAB CARD 3: ATOMIC SANDBOX -->
+            <div class="interactive-card bg-white border border-gray-100 rounded-3xl flex flex-col overflow-hidden shadow-sm hover:shadow-md transition duration-300">
+                <!-- Visual App Container Placeholder -->
+                <a href="https://atomicsandboxweb.netlify.app/" target="_blank" class="w-full aspect-[16/10] overflow-hidden bg-gray-900 relative group block border-b border-gray-100 flex items-center justify-center text-gray-600">
+                    <div class="absolute p-4 text-center">
+                        <i data-lucide="atom" class="w-12 h-12 text-emerald-500 mx-auto mb-2"></i>
+                        <span class="text-xs text-gray-400 font-medium">Click to Launch Atomic Sandbox</span>
+                    </div>
+                </a>
+                <!-- Card Details -->
+                <div class="p-6 flex flex-col flex-grow justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-950 tracking-tight">Atomic Sandbox</h3>
+                            <span class="text-[9px] tracking-wider font-bold px-2 py-0.5 bg-emerald-500/10 text-emerald-600 rounded-full uppercase border border-emerald-500/20">Chemistry</span>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            A simple interactive atomic structure visualizer designed for learning basic chemistry and elements. It includes all 118 elements of the periodic table and lets you explore atomic orbital structures in a more spatial, highly interactive visual way.
+                        </p>
+                    </div>
+                    
+                    <!-- Action Bar with File Download Link -->
+                    <div class="flex items-center justify-between gap-2 pt-4 border-t border-gray-50 mt-auto">
+                        <a href="https://atomicsandboxweb.netlify.app/" target="_blank" class="text-sm font-semibold text-emerald-600 flex items-center gap-1 hover:text-emerald-700 transition">
+                            Launch Live <i data-lucide="external-link" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://drive.google.com/file/d/1Vm_N_CQLfFTzVNHMwCq-UHSZVF2V55o6/view?usp=sharing" target="_blank" class="inline-flex items-center gap-1 text-[11px] font-medium bg-gray-100 hover:bg-emerald-600 hover:text-white text-gray-700 px-3 py-1.5 rounded-full transition duration-300">
+                            <i data-lucide="download" class="w-3.5 h-3.5"></i> Download File
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LAB CARD 4: MINDSCIENCE AI -->
+            <div class="interactive-card bg-white border border-gray-100 rounded-3xl flex flex-col overflow-hidden shadow-sm hover:shadow-md transition duration-300">
+                <!-- Visual App Container Placeholder -->
+                <a href="https://mindscience-ai.vercel.app/" target="_blank" class="w-full aspect-[16/10] overflow-hidden bg-slate-950 relative group block border-b border-gray-100 flex items-center justify-center text-gray-600">
+                    <div class="absolute p-4 text-center">
+                        <i data-lucide="bot" class="w-12 h-12 text-amber-500 mx-auto mb-2 animate-pulse"></i>
+                        <span class="text-xs text-gray-400 font-medium">Click to Open Assistant Workspace</span>
+                    </div>
+                </a>
+                <!-- Card Details -->
+                <div class="p-6 flex flex-col flex-grow justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-950 tracking-tight">MindScience AI</h3>
+                            <span class="text-[9px] tracking-wider font-bold px-2 py-0.5 bg-amber-500/10 text-amber-600 rounded-full uppercase border border-amber-500/20">AI Assistant</span>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            An open-source chatbot companion custom-built to handle complex STEM calculations, technical problem-solving, and clean programming scripts smoothly inside a straightforward conversation container.
+                        </p>
+                    </div>
+                    
+                    <!-- Action Bar -->
+                    <div class="flex items-center justify-between gap-4 pt-4 border-t border-gray-50 mt-auto">
+                        <a href="https://mindscience-ai.vercel.app/" target="_blank" class="text-sm font-semibold text-amber-600 flex items-center gap-1 hover:text-amber-700 transition">
+                            Chat Live <i data-lucide="external-link" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-gray-100 bg-gray-50/50 backdrop-blur-sm py-12 w-full text-center relative z-10">
+        <div class="flex justify-center items-center gap-3 mb-6">
+            <img src="assets/images/HueMInd Studio.png" alt="HueMind Identifier" class="w-8 h-8 object-contain opacity-80">
+            <span class="font-semibold text-gray-500 text-xs uppercase tracking-widest">HueMind Studios Hub</span>
+        </div>
+        <p class="text-sm text-gray-600">© 2026 HueMind Studios. Built for the human experience.</p>
+        <p class="text-xs text-gray-400 mt-2">Student-Led Creative Education. Philippines.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

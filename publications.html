@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HueMind Publications | Essays, Guides & Media</title>
+    
+    <!-- Global Brand Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="overflow-x-hidden bg-white selection:bg-blue-500/10">
+
+    <!-- Header Injection Target -->
+    <div id="global-header"></div>
+
+    <!-- MAIN HERO HEADER -->
+    <header class="max-w-4xl mx-auto px-6 pt-20 pb-12 relative z-10">
+        <span class="text-xs font-bold uppercase tracking-widest text-purple-600 bg-purple-50 px-3 py-1.5 rounded-full border border-purple-200/40">Mind & Modern Life</span>
+        <h1 class="text-4xl md:text-6xl font-extrabold text-gray-950 tracking-tighter mt-4 leading-tight">
+            The Shared <span class="text-purple-600">Human Experience</span>.
+        </h1>
+        <p class="mt-4 text-lg text-gray-600 max-w-2xl font-light">
+            A collection of quiet observations, field notes on academic endurance, creative friction, and the psychology of starting over. Free and open access.
+        </p>
+    </header>
+
+    <!-- MAIN HUB CONTAINER -->
+    <main class="max-w-6xl mx-auto px-6 w-full mb-32 relative z-10">
+        
+        <!-- SECTION 1: FEATURED EDITORIAL (BIG LAYOUT) -->
+        <section class="interactive-card bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition duration-300 mb-12 grid grid-cols-1 lg:grid-cols-12 gap-0">
+            <!-- Article Art -->
+            <div class="lg:col-span-7 bg-gray-950 aspect-[16/10] lg:aspect-auto min-h-[300px] relative overflow-hidden group">
+                <img src="assets/images/thedeskthatoutlivedmotivation.jpg" alt="The Desk That Outlived My Motivation Cover Art" class="w-full h-full object-cover group-hover:scale-101 transition duration-700">
+                <div class="absolute inset-0 bg-black/5"></div>
+            </div>
+            <!-- Article Teaser Details -->
+            <div class="lg:col-span-5 p-8 md:p-10 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center gap-2 mb-4 text-xs font-bold uppercase tracking-wider text-purple-600">
+                        <span>Editorial</span>
+                        <span class="text-gray-300">•</span>
+                        <span>Mind and Modern Life</span>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-gray-950 tracking-tight leading-tight mb-4">
+                        The Desk That Outlived My Motivation
+                    </h2>
+                    <p class="text-gray-600 text-sm md:text-base leading-relaxed font-light mb-6">
+                        It has seen more versions of my motivations than my friends have. It remembers the clean starts, the fresh beginning energy that lasted exactly three days, and the quiet procrastination disguised as rest...
+                    </p>
+                </div>
+                <div class="pt-6 border-t border-gray-50 flex items-center justify-between">
+                    <span class="text-xs text-gray-400 font-medium">By HueMind • 3 min read</span>
+                    <button onclick="openArticle('article-desk')" class="text-sm font-semibold text-purple-600 flex items-center gap-1 hover:text-purple-700 transition focus:outline-none">
+                        Read Article <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: ARTICLES GRID -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- EDITORIAL CARD 2 -->
+            <div class="interactive-card bg-white border border-gray-100 rounded-3xl flex flex-col overflow-hidden shadow-sm hover:shadow-md transition duration-300">
+                <div class="w-full aspect-[16/10] overflow-hidden bg-gray-950 relative group">
+                    <img src="assets/images/strangefeelingofwantingtobeproductive.jpg" alt="The Strange Feeling of Wanting to be Productive Art" class="w-full h-full object-cover group-hover:scale-102 transition duration-500">
+                </div>
+                <div class="p-6 flex flex-col flex-grow justify-between">
+                    <div>
+                        <div class="flex items-center gap-2 mb-3 text-[10px] font-bold uppercase tracking-wider text-purple-600">
+                            <span>Editorial</span>
+                            <span class="text-gray-300">•</span>
+                            <span>Mind and Modern Life</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-950 tracking-tight mb-3 leading-snug">
+                            The Strange Feeling of Wanting to be Productive But Not Moving
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed font-light mb-6">
+                            The cursor blinks. You read the same line 3 times. An hour disappears. Not because you didn't want to work, but because of a subtle mental friction keeping you in limbo.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-50 flex items-center justify-between mt-auto">
+                        <span class="text-xs text-gray-400">4 min read</span>
+                        <button onclick="openArticle('article-friction')" class="text-sm font-semibold text-purple-600 flex items-center gap-1 hover:text-purple-700 transition focus:outline-none">
+                            Read Essay <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FUTURE ADDITIONS PLACEHOLDER BOX -->
+            <div class="border-2 border-dashed border-gray-100 rounded-3xl p-8 flex flex-col items-center justify-center text-center bg-gray-50/30">
+                <div class="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center text-purple-500 mb-3">
+                    <i data-lucide="book-open" class="w-5 h-5"></i>
+                </div>
+                <h4 class="text-sm font-bold text-gray-900 tracking-tight">More Perspectives Incoming</h4>
+                <p class="text-xs text-gray-500 max-w-[200px] mt-1 font-light">Drafting system blueprints and notes on human-centric code development.</p>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- OVERLAY READING MODAL CONTAINER -->
+    <div id="reading-modal" class="fixed inset-0 z-50 overflow-y-auto hidden bg-white">
+        <!-- Close Control Bar (Sticky top) -->
+        <div class="sticky top-0 bg-white/90 backdrop-blur-md border-b border-gray-100 z-50">
+            <div class="max-w-3xl mx-auto px-6 h-16 flex items-center justify-between">
+                <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider">HueMind Publications Reader</span>
+                <button onclick="closeArticle()" class="flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-black transition focus:outline-none">
+                    Close <i data-lucide="x" class="w-4 h-4"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- ARTICLE CONTENT INJECTION POINTS -->
+        <article class="max-w-2xl mx-auto px-6 py-12 md:py-20 font-serif selection:bg-purple-500/10">
+            
+            <!-- ARTICLE 1 TEXT: THE DESK THAT OUTLIVED MY MOTIVATION -->
+            <div id="article-desk" class="hidden text-gray-900 text-lg leading-relaxed space-y-6">
+                <header class="font-sans mb-12 not-serif">
+                    <span class="text-xs font-bold uppercase tracking-widest text-purple-600">Mind and Modern Life</span>
+                    <h1 class="text-3xl md:text-5xl font-extrabold text-gray-950 tracking-tighter mt-2 mb-4 leading-tight">The Desk That Outlived My Motivation</h1>
+                    <div class="text-sm text-gray-500">Published by HueMind Publications</div>
+                </header>
+                
+                <p class="font-medium italic text-xl text-gray-700 font-sans border-l-2 border-purple-500 pl-4 my-8">
+                    It has seen more versions of my motivations than my friends have...
+                </p>
+                <p>There was a version of me who thought I would always be disciplined. Another version who believed late-night study sessions meant I was becoming someone. And a version of me who color-coded notes like my future depended on perfect organization. And a version who swore this time it will work and would be different.</p>
+                <p>My desk remembers all of them.</p>
+                <p>It remembers the clean starts, the reorganized notebooks, and the new pens that were bought with confidence... The fresh beginning energy that lasted exactly three days.</p>
+                <p>And then, it remembers the silence that followed...</p>
+                <p>The untouched books, assignments, and the quiet procrastination disguised as rest.</p>
+                <p>Somehow, my desk never judged me. It just stayed there. Waiting.</p>
+                <p>Watching every restart like it had already seen the ending before I did. Long-term academic struggle is not always dramatic. It is quiet. It is repetitive.</p>
+                <p>It is waking up with determination and going to sleep with disappointment many times more than you can count.</p>
+                <p>Well, People often imagine struggle as failure. But sometimes struggle is just endurance with interruptions.</p>
+                <p>You don’t stop trying. You just keep resetting. Again. And again. And again.</p>
+                <p>Until motivation starts to feel temporary. Something you rent for a few hours before it disappears. The strange part is not that motivation fades. It’s that you keep coming back anyway.</p>
+                <p>To the same desk. The same chair. The same unfinished work.</p>
+                <p>As if something in you refuses to accept that this version of you is final. Maybe that’s why the desk matters. It becomes a witness. Not of success. But of persistence.</p>
+                <p>Of restarts that didn’t work out immediately, but still mattered.</p>
+                <div class="py-4 font-sans text-xs uppercase tracking-widest text-gray-400 font-bold">Long-term academic struggle has a quiet truth:</div>
+                <p class="text-xl text-gray-950 font-medium">You are not one version of yourself. You are a collection of every version that tried. Even the ones that didn’t continue. Especially those ones.</p>
+                <p>Because they built the habit of returning. And returning is its own discipline. Not loud. Not impressive. Just steady.</p>
+                <p>So maybe the desk was never outliving your motivation. Maybe it was surviving with it. One restart at a time.</p>
+                <p>And if it has seen you fail to begin again more times than you can count… It has also seen you begin again more times than you realize.</p>
+            </div>
+
+            <!-- ARTICLE 2 TEXT: STRANGE FEELING OF WANTING TO BE PRODUCTIVE -->
+            <div id="article-friction" class="hidden text-gray-900 text-lg leading-relaxed space-y-6">
+                <header class="font-sans mb-12 not-serif">
+                    <span class="text-xs font-bold uppercase tracking-widest text-purple-600">Mind and Modern Life</span>
+                    <h1 class="text-3xl md:text-5xl font-extrabold text-gray-950 tracking-tighter mt-2 mb-4 leading-tight">The Strange Feeling of Wanting to Be Productive But Not Moving</h1>
+                    <div class="text-sm text-gray-500">Published by HueMind Publications</div>
+                </header>
+
+                <p>You open your laptop. The docs are already there. Your notes are organized. Your water bottle is full. You finally have the time. You finally have the intention.</p>
+                <p>For a brief moment, it feels like everything is aligned... Then somehow...</p>
+                <p class="text-xl font-bold font-sans tracking-tight text-gray-950 my-6">Nothing happens.</p>
+                <p>The cursor blinks. You read the same line 3 times then, you check a notification, open another tab, then another, and another...</p>
+                <p>An hour disappears. Not because you didn't want to work. Not because you were distracted by something important, and not because you didn't care.</p>
+                <p>In fact, the frustrating part is that you <strong>DID</strong> care. You wanted to start, but it started to feel strangely difficult.</p>
+                <p>Most people have experienced this feeling. Students feel it while staring at their unfinished assignments. Workers feel it while looking at tasks they know they need to complete. Creators feel it while facing a blank page, an empty canvas, or an unfinished idea.</p>
+                <p>It's one of the most common experiences in modern life, yet we rarely have a name for it.</p>
+                <p>We often assume the problem is motivation. If only we were more disciplined. If only we tried harder. If only we wanted success enough...</p>
+                <p class="text-gray-950 font-medium font-sans border-l-2 border-purple-500 pl-4">Sometimes, the real issue isn’t about motivation at all. Sometimes, it’s about the mental friction.</p>
+                <p>Mental friction can sneak in and show up in ways that are hard to spot. A task might seem overwhelming. The next step could feel hazy. There might be too many choices vying for your attention.</p>
+                <p>Your mind quietly interprets all of this as resistance. Not as danger. Not as a failure. Just resistance.</p>
+                <p>And resistance has a peculiar way of affecting us. It doesn’t always bring us to a complete standstill. Instead, it keeps us in limbo. Close enough to think about the work. But not close enough to actually start.</p>
+                <p>That’s why these moments can feel so draining. You’re not resting. But you’re not making any progress either. You’re stuck somewhere in the middle.</p>
+                <p>Maybe productivity isn’t just about how hard you push yourself. Maybe it’s about finding ways to ease that friction.</p>
+                <p class="font-sans font-bold text-gray-950 mt-8 mb-2">So instead of asking: “How do I force myself to work?”</p>
+                <p class="font-sans font-bold text-purple-600 text-xl mb-6">It might be more helpful to ask: “What’s making that first step feel so heavy?”</p>
+                <p>Perhaps the task needs to be broken down. Maybe the goal needs to be clearer. Or maybe that first step is just too far away...</p>
+                <p>Small beginnings often seem trivial. Yet, most meaningful work starts that way. Not with a burst of momentum. Not with a wave of inspiration. Just with a first step that feels doable.</p>
+                <p>Some days, the toughest part isn’t the work itself. It’s convincing yourself that starting is okay.</p>
+                <p>And maybe that’s a more human experience than we often care to admit.</p>
+            </div>
+
+        </article>
+    </div>
+
+    <!-- Footer Injection Target -->
+    <div id="global-footer"></div>
+
+    <!-- System UI Engine Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Modal Interactivity Logic
+        function openArticle(articleId) {
+            const modal = document.getElementById('reading-modal');
+            // Hide all text bodies first
+            document.getElementById('article-desk').classList.add('hidden');
+            document.getElementById('article-friction').classList.add('hidden');
+            
+            // Show target text body & lock background window scrolling
+            document.getElementById(articleId).classList.remove('hidden');
+            modal.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeArticle() {
+            const modal = document.getElementById('reading-modal');
+            modal.classList.add('hidden');
+            // Restore background layout scrolling control
+            document.body.classList.remove('overflow-hidden');
+        }
+    </script>
+</body>
+</html>
