@@ -94,6 +94,35 @@
                 </div>
             </div>
 
+            <!-- SCIENCE CAMPFIRE CARD 1 (YOUR NEW ADDITION) -->
+            <div class="interactive-card bg-white border border-gray-100 rounded-3xl flex flex-col overflow-hidden shadow-sm hover:shadow-md transition duration-300">
+                <div class="w-full aspect-[16/10] overflow-hidden bg-gray-950 relative group">
+                    <!-- Note: Update the src path once you have an image file, or use an abstract placeholder layout -->
+                    <img src="assets/images/earth_as_a_system.jpg" alt="Earth as a System Cover Art" class="w-full h-full object-cover group-hover:scale-102 transition duration-500">
+                </div>
+                <div class="p-6 flex flex-col flex-grow justify-between">
+                    <div>
+                        <div class="flex items-center gap-2 mb-3 text-[10px] font-bold uppercase tracking-wider text-emerald-600">
+                            <span>Science Campfire</span>
+                            <span class="text-gray-300">•</span>
+                            <span>No. 1</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-950 tracking-tight mb-3 leading-snug">
+                            Earth as a System: The Cycles that Surround Us
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed font-light mb-6">
+                            Earth isn’t just a sphere beneath our feet. It behaves strangely, as if it were an active, continuous process rather than a static entity.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-50 flex items-center justify-between mt-auto">
+                        <span class="text-xs text-gray-400">3 min read</span>
+                        <button onclick="openArticle('article-earth-system')" class="text-sm font-semibold text-emerald-600 flex items-center gap-1 hover:text-emerald-700 transition focus:outline-none">
+                            Read Story <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
             <!-- FUTURE ADDITIONS PLACEHOLDER BOX -->
             <div class="border-2 border-dashed border-gray-100 rounded-3xl p-8 flex flex-col items-center justify-center text-center bg-gray-50/30">
                 <div class="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center text-purple-500 mb-3">
@@ -184,6 +213,38 @@
                 <p>And maybe that’s a more human experience than we often care to admit.</p>
             </div>
 
+            <!-- ARTICLE 3 TEXT: EARTH AS A SYSTEM (YOUR NEW ADDITION) -->
+            <div id="article-earth-system" class="hidden text-gray-900 text-lg leading-relaxed space-y-6">
+                <header class="font-sans mb-12 not-serif">
+                    <div class="flex items-center gap-2 mb-2 text-xs font-bold uppercase tracking-widest text-emerald-600">
+                        <span>Science Campfire Series</span>
+                        <span>•</span>
+                        <span>No. 1</span>
+                    </div>
+                    <h1 class="text-3xl md:text-5xl font-extrabold text-gray-950 tracking-tighter mb-4 leading-tight">Earth as a System</h1>
+                    <div class="text-sm text-gray-500">Published by HueMind Publications</div>
+                </header>
+                
+                <p class="font-medium italic text-xl text-emerald-700 font-sans border-l-2 border-emerald-500 pl-4 my-8">
+                    Earth isn’t just a sphere beneath our feet. It’s a system that surrounds us.
+                </p>
+                
+                <p>Most of us carry the same image of Earth from childhood: A blue sphere, a globe on a classroom desk, a pale bluish-white dot drifting quietly through space. And technically, that image is correct.</p>
+                <p>But it's not really the Earth we live in.</p>
+                <p>You don't experience a geometric object when you wake up in the morning. You experience weather moving through a window. You breathe air shaped by forests thousands of miles away. The water from your tap has traveled through clouds, rivers, and soil in a cycle that predates humanity by billions of years. The bacteria in our guts are negotiating with our immune systems in ways science is only beginning to understand. None of this is separate. All of it is the same thing, endlessly looping back on itself.</p>
+                <p>That's the version of Earth we rarely talk about.</p>
+                <p>Earth isn’t just a rock with an atmosphere attached. It is a living network of cycles. Water evaporates from oceans, forms clouds, falls as rain, flows through rivers, and returns to the sea. Plants absorb carbon dioxide and release oxygen. Animals consume oxygen and produce carbon dioxide. Microbes break down dead matter and return nutrients to the soil.</p>
+                <p>Forests influence rainfall. Oceans regulate temperature. Ice reflects sunlight. Volcanoes reshape landscapes. Tiny organisms in the ocean help shape the chemistry of the entire atmosphere.</p>
+                
+                <p class="text-xl font-bold font-sans tracking-tight text-gray-950 my-6">Nothing works alone.</p>
+                
+                <p>Each chat. Every city. Every place. Every conflict. Every love story. Every scientific discovery in human history has occurred within that very limited envelope of atmosphere.</p>
+                <p>Earth behaves strangely, as if it were a process rather than an entity.</p>
+                <p>The planet we’re standing on is continually pushing matter around. Water becomes a cloud. The cloud turns into rain. Rain forms a river. The river empties into the ocean. Carbon goes from the atmosphere to plants, then to animals, and finally to soil. And eventually, back into the atmosphere.</p>
+                
+                <p class="text-xl text-emerald-600 font-medium font-sans mt-8">The system never really stops.</p>
+            </div>
+
         </article>
     </div>
 
@@ -199,6 +260,7 @@
             // Hide all text bodies first
             document.getElementById('article-desk').classList.add('hidden');
             document.getElementById('article-friction').classList.add('hidden');
+            document.getElementById('article-earth-system').classList.add('hidden');
             
             // Show target text body & lock background window scrolling
             document.getElementById(articleId).classList.remove('hidden');
